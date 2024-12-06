@@ -1,28 +1,4 @@
-<<<<<<< HEAD
 # README
+rails自己学習用に作成したQ＆Aアプリです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-=======
 # rails-lesson-QandA
->>>>>>> 7cf80e7874ad185d659b6295d41ff870a11ce1f0
