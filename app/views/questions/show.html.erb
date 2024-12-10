@@ -1,0 +1,33 @@
+<h1>show</h1>
+<p>ID:<%=@question.id %></p>
+<p>TITLE:<%=@question.title %></p>
+<p>NAME:<%=@question.name %></p>
+<p>content:<%=@question.content %></p>
+<p></p>
+
+<h2>Answers</h2>
+<% @question.answers.each do |ans|  %>
+  <p>name:</p><br>
+  <p><%= ans.name%></p>
+  <p>content:</p><br>
+  <p><%= ans.content%></p>
+  <%= link_to "回答削除", [ans.question, ans],
+              data: {turbo_method: :delete, turbo_confirm: '本当に削除しますか?'} %>
+
+<% end %>
+
+<h2>add a answer</h2>
+<%= form_with model:[@question,@question.answers.build] do |form| %>
+<div>
+  <%= form.label :name%><br>
+  <%= form.text_area :name%>
+</div>
+<div>
+  <%= form.label :content%><br>
+  <%= form.text_area :content%>
+</div>
+</div>
+  <%= form.submit "回答"%>
+</div>
+<% end %>
+<%=render partial: "toplink"%>
